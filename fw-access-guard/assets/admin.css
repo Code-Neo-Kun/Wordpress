@@ -1,0 +1,810 @@
+/* FW Access Guard Admin Styles */
+:root {
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --primary-color: #667eea;
+    --primary-dark: #5a67d8;
+    --secondary-color: #764ba2;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+    --bg-light: #f8f9fa;
+    --border-color: #dee2e6;
+    --text-primary: #2d3748;
+    --text-secondary: #495057;
+    --text-muted: #6c757d;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 15px rgba(102, 126, 234, 0.3);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.3);
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.2s ease;
+    --transition-slow: 0.3s ease;
+}
+
+.fwag-admin-wrap {
+    max-width: 1200px;
+}
+
+.fwag-admin-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.fwag-admin-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+.fwag-admin-header p {
+    margin: 10px 0 0 0;
+    opacity: 0.9;
+    font-size: 1.1em;
+}
+
+.fwag-settings-section {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.fwag-section-header {
+    background: #f8f9fa;
+    padding: 20px 30px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.fwag-section-header h2 {
+    margin: 0;
+    color: #495057;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.fwag-section-content {
+    padding: 30px;
+}
+
+.fwag-form-group {
+    margin-bottom: var(--spacing-xl);
+}
+
+.fwag-form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+    font-size: 15px;
+    letter-spacing: -0.3px;
+}
+
+.fwag-form-group .description {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin-top: var(--spacing-sm);
+    line-height: 1.5;
+}
+
+.fwag-checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.fwag-checkbox-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.fwag-checkbox-item:hover {
+    background: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.fwag-checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.fwag-input-group {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.fwag-input-group .regular-text,
+.fwag-input-group .large-text {
+    flex: 1;
+}
+
+.fwag-textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: var(--spacing-md);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.6;
+    transition: all var(--transition-base);
+    resize: vertical;
+    box-sizing: border-box;
+    background: white;
+}
+
+.fwag-textarea:hover {
+    border-color: #bcc8d6;
+}
+
+.fwag-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background: white;
+}
+
+.fwag-textarea:disabled {
+    background-color: #f5f6f7;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.fwag-input {
+    padding: 12px var(--spacing-md);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    transition: all var(--transition-base);
+    background: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fwag-input:hover {
+    border-color: #bcc8d6;
+}
+
+.fwag-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background: white;
+}
+
+.fwag-input:disabled,
+.fwag-input[readonly] {
+    background-color: #f5f6f7;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.fwag-number-input {
+    width: 80px;
+}
+
+.fwag-select {
+    padding: 12px var(--spacing-md);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: white;
+    font-size: 14px;
+    min-width: 150px;
+    transition: all var(--transition-base);
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.fwag-select:hover {
+    border-color: #bcc8d6;
+}
+
+.fwag-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.fwag-media-upload {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.fwag-upload-button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.fwag-upload-button:hover {
+    background: #5a67d8;
+}
+
+.fwag-remove-button {
+    background: #e53e3e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.fwag-remove-button:hover {
+    background: #c53030;
+}
+
+.fwag-logo-preview img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.fwag-submit-button {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: var(--radius-md);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-md);
+    letter-spacing: 0.3px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fwag-submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.fwag-submit-button:active {
+    transform: translateY(0);
+}
+
+.fwag-submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.fwag-metabox {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.fwag-metabox-toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.fwag-metabox-toggle input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.fwag-metabox-option {
+    padding: 15px;
+    background: white;
+    border-radius: 6px;
+    border: 2px solid #e9ecef;
+    transition: border-color 0.2s ease;
+}
+
+.fwag-metabox-option:hover {
+    border-color: #667eea;
+}
+
+.fwag-metabox-option input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    :root {
+        font-size: 14px;
+    }
+
+    .fwag-admin-header {
+        padding: var(--spacing-lg);
+    }
+
+    .fwag-admin-header h1 {
+        font-size: 1.75em;
+    }
+
+    .fwag-admin-header p {
+        font-size: 1em;
+    }
+
+    .fwag-section-content {
+        padding: var(--spacing-lg);
+    }
+
+    .fwag-checkbox-group {
+        grid-template-columns: 1fr;
+    }
+
+    .fwag-media-upload {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .fwag-submit-button {
+        width: 100%;
+    }
+
+    .fwag-input-group {
+        flex-direction: column;
+    }
+}
+
+/* Status Indicators */
+.fwag-status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    gap: 6px;
+}
+
+.fwag-status-badge::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.fwag-status-active {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
+
+.fwag-status-active::before {
+    background: #10b981;
+}
+
+.fwag-status-inactive {
+    background: rgba(209, 213, 219, 0.5);
+    color: #6b7280;
+    animation: none;
+}
+
+.fwag-status-inactive::before {
+    background: #6b7280;
+    animation: none;
+}
+
+.fwag-status-warning {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.fwag-status-warning::before {
+    background: #f59e0b;
+}
+
+/* Metabox Improvements */
+.fwag-metabox-section {
+    margin-bottom: var(--spacing-lg);
+    background: white;
+    border-radius: var(--radius-sm);
+    border: 2px solid var(--border-color);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.fwag-metabox-section:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.fwag-metabox-section h4 {
+    margin: 0;
+    padding: 12px 16px;
+    background: var(--bg-light);
+    border-bottom: 2px solid var(--border-color);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.fwag-metabox-content {
+    padding: var(--spacing-md);
+}
+
+.fwag-feature-toggle {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    gap: var(--spacing-md);
+}
+
+.fwag-feature-toggle input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.fwag-feature-toggle-label {
+    flex: 1;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.fwag-feature-toggle-label small {
+    display: block;
+    color: var(--text-muted);
+    font-weight: normal;
+    font-size: 0.85em;
+    margin-top: 2px;
+}
+
+.fwag-feature-options {
+    margin-left: 28px;
+    padding-left: var(--spacing-md);
+    border-left: 2px solid var(--primary-color);
+    margin-top: var(--spacing-sm);
+    display: none;
+}
+
+.fwag-feature-options.open {
+    display: block;
+    animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Feature Cards */
+.fwag-feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.fwag-feature-card {
+    padding: var(--spacing-md);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    background: white;
+}
+
+.fwag-feature-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
+}
+
+.fwag-feature-card.active {
+    border-color: var(--primary-color);
+    background: rgba(102, 126, 234, 0.05);
+}
+
+.fwag-feature-card-icon {
+    font-size: 24px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.fwag-feature-card-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.fwag-feature-card-desc {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* Configuration Summary */
+.fwag-config-summary {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    border-left: 4px solid var(--primary-color);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.fwag-config-summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 13px;
+}
+
+.fwag-config-summary-item:not(:last-child) {
+    border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.fwag-config-summary-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.fwag-config-summary-value {
+    color: var(--primary-color);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Better Spacing for Standard Elements */
+.fwag-metabox-option {
+    padding: var(--spacing-md);
+    background: var(--bg-light);
+    border-radius: var(--radius-sm);
+    border: 2px solid var(--border-color);
+    transition: all var(--transition-base);
+    margin-top: var(--spacing-sm);
+}
+
+.fwag-metabox-option:hover {
+    border-color: var(--primary-color);
+    background: white;
+}
+
+/* Help & Context Icons */
+.fwag-help-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--bg-light);
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: bold;
+    cursor: help;
+    margin-left: 4px;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-base);
+}
+
+.fwag-help-icon:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Live Preview Panel */
+.fwag-preview-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    align-items: start;
+}
+
+.fwag-preview-panel {
+    background: var(--bg-light);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#fwag-overlay-preview {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    --fwag-blur-level: 5px;
+    --fwag-overlay-opacity: 0.95;
+}
+
+#fwag-overlay-preview::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, var(--fwag-overlay-opacity));
+    z-index: 1;
+}
+
+.fwag-sample-content {
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="%23e0e0e0" width="100" height="100"/><rect fill="%23d0d0d0" y="0" width="100" height="20"/><line x1="0" y1="30" x2="100" y2="30" stroke="%23c0c0c0"/><line x1="0" y1="45" x2="80" y2="45" stroke="%23c0c0c0"/><line x1="0" y1="60" x2="85" y2="60" stroke="%23c0c0c0"/></svg>') repeat;
+    filter: blur(var(--fwag-blur-level));
+    opacity: 0.5;
+    z-index: 0;
+}
+
+#fwag-overlay-preview .overlay-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 400px;
+    padding: var(--spacing-lg);
+}
+
+#fwag-overlay-preview .overlay-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#fwag-overlay-preview .overlay-message {
+    font-size: 16px;
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#fwag-overlay-preview .overlay-button {
+    display: inline-block;
+    background: white;
+    color: #333;
+    padding: 12px 32px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#fwag-overlay-preview .overlay-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.fwag-preview-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Settings Panel */
+.fwag-settings-panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+/* Form Groups in Preview */
+.fwag-preview-settings .fwag-form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.fwag-preview-settings label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.fwag-preview-settings input[type="text"],
+.fwag-preview-settings textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    transition: all var(--transition-base);
+}
+
+.fwag-preview-settings input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Responsive adjustments for preview */
+@media (max-width: 1024px) {
+    .fwag-preview-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    #fwag-overlay-preview {
+        min-height: 250px;
+    }
+
+    #fwag-overlay-preview .overlay-title {
+        font-size: 22px;
+    }
+
+    #fwag-overlay-preview .overlay-message {
+        font-size: 14px;
+    }
+}
+
+/* Feature Option Visibility Animation */
+.fwag-feature-options.open {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+    to {
+        opacity: 1;
+        max-height: 1000px;
+    }
+}
