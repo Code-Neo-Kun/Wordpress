@@ -1,0 +1,183 @@
+/* Frontend Dashboard Styles */
+
+.ls-user-dashboard {
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.ls-user-dashboard h2 {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 10px;
+}
+
+.ls-licenses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.ls-license-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.ls-license-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.ls-card-header {
+    background: linear-gradient(135deg, #0073aa, #005a87);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ls-card-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.ls-card-header .status {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.ls-card-body {
+    padding: 20px;
+}
+
+.ls-card-row {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.ls-card-row .label {
+    font-weight: bold;
+    color: #333;
+    min-width: 120px;
+}
+
+.ls-card-row .value {
+    flex: 1;
+    color: #666;
+}
+
+.ls-card-row.expired .label,
+.ls-card-row.expired .value {
+    color: #d63638;
+    font-weight: bold;
+}
+
+.ls-card-row.expiring-soon .label,
+.ls-card-row.expiring-soon .value {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+.ls-plugins-list,
+.ls-domains-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.ls-plugins-list li,
+.ls-domains-list li {
+    background: #f5f5f5;
+    padding: 8px 12px;
+    border-radius: 3px;
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+.ls-domains-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ls-domains-list li small {
+    color: #999;
+    margin: 0 10px;
+}
+
+.ls-domains-list li a {
+    color: #d63638;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.ls-domains-list li a:hover {
+    text-decoration: underline;
+}
+
+.ls-card-actions {
+    padding: 0 20px 20px 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.ls-card-actions .button {
+    flex: 1;
+    min-width: 120px;
+    margin: 0;
+    text-align: center;
+}
+
+.button.button-small {
+    flex: 0 1 auto;
+    min-width: auto;
+}
+
+/* Status colors */
+.status-active {
+    background: #28a745;
+    color: white;
+}
+
+.status-inactive {
+    background: #6c757d;
+    color: white;
+}
+
+.status-expired {
+    background: #dc3545;
+    color: white;
+}
+
+.status-suspended {
+    background: #ffc107;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ls-licenses-container {
+        grid-template-columns: 1fr;
+    }
+
+    .ls-card-actions {
+        flex-direction: column;
+    }
+
+    .ls-card-actions .button {
+        width: 100%;
+    }
+}
